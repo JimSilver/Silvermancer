@@ -1,0 +1,229 @@
+
+* {
+    box-sizing: border-box;
+    /* Wildcard! Applies to all, be careful what you add in here. */
+}
+
+body {
+    margin: 0;
+    /* Sorry that i'm not using grids, this feels easier to work with! ;__; */
+    background-color: #0B0B21;
+}
+
+header {
+    background-color: #232363;
+    width: auto;
+    padding: 3px;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+main {
+    width: auto;
+    padding: 10px;
+}
+
+
+/* Font Styling Start */
+h1 {
+    font-family: 'Tangerine', cursive;
+    background: -webkit-linear-gradient(#eeeeee, #333333); /* Gradient but on Text! */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+    margin: 15px;
+}
+
+h2 {
+    font-family: 'Tangerine', cursive;
+
+    /*color: #C1C1FE;*/
+    font-size: 60px;
+    text-align: center;
+    margin: -1px;
+    margin-bottom: 5px;
+}
+
+.awork { /*Artwork Gradient Text Colors*/
+    background: -webkit-linear-gradient(#9d7cd9, #50416b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mdesign { /*Media Design Gradient Text Colors*/
+    background: -webkit-linear-gradient(#ced97c, #767d43);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gassets { /*Game Assets Gradient Text Colors*/
+    background: -webkit-linear-gradient(#d97c7c, #824845);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    color: #C1C1FE;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+/* Font Styling End */
+
+/* Navigation Stylings Start */
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; /* Set to 0, this should be overlapping the header!! */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #171741;
+    top: 0;
+    width: 100%;
+    font-family: 'Ysabeau Infant', sans-serif;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+li {
+    float: left;
+    border-right: 1px solid #33337A;
+    /* Don't use li:last-child & border-right: none; As this is going right it is not removing the correct one! */
+}
+
+li a, .listbutton { /* Stylings for top nav links */
+    display: inline-block;
+    color: #C1C1FE; /*Text Color*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .listmenu:hover .listbutton {
+    background-color: #6161DF;
+    /* Changes the background color when moused over*/
+}
+
+li a:hover:not(.selected) {
+    background-color: #6161DF;
+    /* Boolean to change color when hovered over AND that its the active webpage. */
+}
+
+.selected {
+    background-color: #33337A;
+    /* This changes the color on the top nav of the current webpage, so users don't go into a loop of clicking on the page they are currently on already. */
+}
+
+li.listmenu {
+    display: inline-block;
+}
+
+.listcontent { /* Stylings for drop down nav links */
+    display: none;
+    position: absolute;
+    background-color: #33337A;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Nifty trick for on-demand drop shadow! */
+    z-index: 1;
+    /* Don't use right: as it does not adjust */
+}
+
+.listcontent a {
+    color: #C1C1FE; /*Text Color*/
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/*.listcontent a:hover {
+    background-color: #B385F1;
+}*/
+
+.listmenu:hover .listcontent {
+    display: block;
+}
+
+@media screen and (max-width: 600px){ /* Responsive layers? Unsure what is interferring elsewhere. Should be stacking vertically when compressed. */
+    li a, .listbutton {
+        float: none;
+        text-align: left;
+        width: 100%;
+    }
+}
+
+/* Navigation Stylings End */
+
+/* Column Layout Start */
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px; /* Unsure if built-in padding is a good idea, or if it should be based on each element. */
+}
+
+.cleaner:after {
+    content: "";
+    display: table;
+    clear: both;
+    /* Cleanup */
+}
+
+@media screen and (max-width: 600px) { /* 3 -> 1 Columns on smaller layouts */
+  .column {
+    width: 100%;
+  }
+}
+
+/* Column Layout End */
+
+footer {
+   /* background-color: #111131;*/
+    padding: 4px;
+    text-align: center;
+    width: 100%;
+}
+
+.fakeimage { /* REAL FAKE IMAGE! */
+    display: inline-block;
+    margin-left: 70px;
+    background-color: #aaa;
+    width: 80%;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.frame {
+    display: flex; /* <--- this thing fought with me on either being flex or block to get it to center often. */
+    margin: auto;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
