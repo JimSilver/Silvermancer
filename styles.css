@@ -36,8 +36,7 @@ h1 {
 
 h2 {
     font-family: 'Tangerine', cursive;
-
-    /*color: #C1C1FE;*/
+    color: #C1C1FE;
     font-size: 60px;
     text-align: center;
     margin: -1px;
@@ -175,7 +174,7 @@ li.listmenu {
 .column {
     float: left;
     width: 33.33%;
-    padding: 10px; /* Unsure if built-in padding is a good idea, or if it should be based on each element. */
+    padding: 2%; /* Unsure if built-in padding is a good idea, or if it should be based on each element. changed from 10px -> 2% */
 }
 
 .cleaner:after {
@@ -200,15 +199,6 @@ footer {
     width: 100%;
 }
 
-.fakeimage { /* REAL FAKE IMAGE! */
-    display: inline-block;
-    margin-left: 70px;
-    background-color: #aaa;
-    width: 80%;
-    padding: 20px 50px;
-    text-align: center;
-}
-
 .frame {
     display: flex; /* <--- this thing fought with me on either being flex or block to get it to center often. */
     margin: auto;
@@ -217,9 +207,172 @@ footer {
     max-width: 400px;
 }
 
+/*ToS and Disclaimer Styling Start*/
+
+.droptext {
+    background-color: #232363;
+    color: #C1C1FE;
+    font-family: 'Ysabeau Infant', sans-serif;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #C1C1FE;
+    font-family: 'Ysabeau Infant', sans-serif;
+    margin-bottom: 30px;
+}
 
 
+.droptext:hover, .droptext:focus {
+    background-color: #6161DF;
+}
 
+.textbox {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.textbox-content {
+    display: none;
+    position: absolute;
+    background-color: #33337A;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+    z-index: 1;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.textbox-content a.drop {
+    color: #C1C1FE;
+    font-family: 'Ysabeau Infant', sans-serif;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    min-width:140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+.show {
+    display: block;
+}
+
+/*ToS and Disclaimer Styling End */
+
+/* Table Layout Start*/
+
+table {
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    color: #C1C1FE;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+td {
+    color: #C1C1FE;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #33337A;
+    /*Handles the padding for rows and collumns*/
+}
+
+table tr:hover td {
+    background-color: #6161DF;
+    /*Hover over highlight row!*/
+}
+
+tr:nth-child(even) {
+    background-color: #171741;
+    /*For Highlighting Even Rows*/
+}
+
+tr:nth-child(odd) {
+    background-color: #232363;
+    /*For Highlighting Odd Rows*/
+}
+
+/* Table Layout End*/
+ 
+/* Form Layout Start */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    resize: vertical;
+    background-color: #171741;
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    color: #C1C1FE;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 15px;
+}
+
+label {
+    display: inline-block;
+    color: #C1C1FE;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+input[type=submit] {
+    background-color: #171741;
+    color: #C1C1FE;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 15px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    width: 60%;
+}
+
+input[type=submit]:hover {
+  background-color: #6161DF;
+    
+}
+
+.formbackground {
+    background-color: #232363;
+    padding: 20px 20px 10px 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.leftside {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.rightside {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Form Layout End */
 
 
 
