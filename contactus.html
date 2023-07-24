@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Ysabeau+Infant&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="type-practice2.css">
+            <title>Silvermancer</title>
+            <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Silvermancer</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="selected" style="float:right"><a href="contactus.html">Contact</a></li>    <!--ORDER IN REVERSE, OTHERWISE DROP LIST WILL NOT APPEAR!-->
+                <li style="float:right"><a href="aboutus.html">About Us</a></li>
+                <li style="float:right" class="listmenu">
+                    <a href="javascript:void(0)" class="listbutton">Gallery</a>  <!--DO NOT REMOVE VOID, USERS WILL BE DUMB OTHERWISE!-->
+                    <div class="listcontent">
+                        <a href="#">Artwork</a>
+                        <a href="#">Media Designs</a>
+                        <a href="#">Game Assets</a>
+                        <a href="#">Archive</a>
+                    </div>
+                </li>
+
+                
+            </ul>
+        </nav>
+        
+        <main>
+                <h2 class="awork">Commissions</h2>
+                <h3 class="aboutwidth">Commission Status: Open!</h3>
+                <p class="aboutwidth">Interested in a Commission? Then please look through if commissions are currently open and the services that I am currently offering! Do please read the Terms of Service before submitting a request. 
+                    If you have any questions, please feel free to reach out below and I will get back to you when available!</p>
+                <h3 class="aboutwidth">Please Read Below Before Submitting A Commission!</h3>
+            
+                <div class="textbox">
+                    <button onclick="myFunction()" class="droptext">Terms of Service</button>
+                    <div id="myDropdown" class="textbox-content">
+                        <p class="aboutwidth">Please understand that commissioning art is a luxury.</p>
+                        <p class="aboutwidth">No refunds at all, it is on you to verify that you can afford the full cost of the commission. If you are accepted by Silvermancer for a commission, a 50% foward of the initial quote is required of the initial quoted price before any work will proceed. You will get the relevant payment information by email at that time. Understand that afterwards, Silvermancer will present to you three (3) different versions of your commission in sketch form where you, as the commissioner, may decide to pick, combine or refine the elements presented. Once the artwork is completed, you will have one month at the time of the artwork completion to pay the remaining outstanding balance before the artwork is handed over without any watermarks. Once you, as the commissioner, have paid and received the artwork at that time, the commission will be deemed complete.</p>
+                        <p class="aboutwidth">If you, as the commissioner, decide to add or change any features or requests after the initial quote, then Silvermancer retains the right to permit any changes. For International Commissions, please understand that shipping may have unforseen costs and you are responsible for any fees at time of shipping, customs or such that arises. Payment for the full commission and shipping must be paid beforehand. Silvermancer reserves the right to re-use, advertise any and all parts of commissions that have not been explicitly negotiated and paid before the commission has been started. If you, as the commissioner, has not communicated what is required for the commission when reached out for a period of one (1) month, then the commission will be terminated at that time. No Commission is private, all artwork created will be displayed on all Silvermancer affiliated media and websites.</p>
+                        <p class="aboutwidth">Silvermancer reserves the right on what is and what is not permitted to be commissioned at any time. More details will be discussed before payment is handed over.</p>
+                    </div>
+                </div>
+            
+                <script>
+                    function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                    
+                    window.onclick = function(event) {
+                        if (!event.target.matches('.droptext')) {
+                            var dropdowns = document.getElementsByClassName("textbox-content");
+                            var i;
+                            for (i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains('show')) {
+                                    openDropdown.classList.remove('show');
+                                }
+                            }
+                        }
+                    }
+                </script>
+
+        
+                <h3 class="aboutwidth">Pricing and Information</h3>
+                <table>
+                    <tr>
+                        <th>Commission</th>
+                        <th>Est. Time</th>
+                        <th>Pricing</th>
+                    </tr>
+                    <tr>
+                        <td>Landscape Painting</td>
+                        <td>2 - 4 Weeks</td>
+                        <td>$40 +</td>
+                    </tr>
+                    <tr>
+                        <td>Caricature Portrait</td>
+                        <td>3 - 6 Weeks</td>
+                        <td>$50 +</td>
+                    </tr>
+                    <tr>
+                        <td>Charicature Portrait</td>
+                        <td>3 - 6 Weeks</td>
+                        <td>$50 +</td>
+                    </tr>                    
+                    <tr>
+                        <td>AI Photo & Tweaking</td>
+                        <td>3 - 6 Weeks</td>
+                        <td>$50 +</td>
+                    </tr>
+                    <tr>
+                        <td>Texture Materials</td>
+                        <td>1 - 5 Weeks</td>
+                        <td>$20 ++</td>
+                    </tr>
+                    <tr>
+                        <td>Emoticons</td>
+                        <td>1 - 4 Weeks</td>
+                        <td>$20 +</td>
+                    </tr>
+                    <tr>
+                        <td>Photo Restoration </td>
+                        <td>1 - 3 Weeks</td>
+                        <td>$30 +</td>
+                    </tr>
+                </table><br>
+
+
+            
+            <div class="formbackground">
+                <form action="welcome.php">
+                    <div class="cleaner">
+                        <div class="leftside">
+                            <label for="client-name">Name</label>
+                        </div>
+                        <div class="rightside">
+                            <input type="text" id="client-name" name="client-name" placeholder="Name Here">
+                        </div>
+                    </div>
+                    <div class="cleaner">
+                        <div class="leftside">
+                            <label for="email-address">Email</label>
+                        </div>
+                        <div class="rightside">
+                            <input type="text" id="email-address" name="email-address" placeholder="Email Address Here">
+                        </div>
+                    </div>
+                    <div class="cleaner">
+                        <div class="leftside">
+                            <label for="inquiry">Inquiry Type</label>
+                        </div>
+                        <div class="rightside">
+                            <select id="inquiry" name="inquiry">
+                                <option value="commission">Commission</option>
+                                <option value="businessquestion">Business Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cleaner">
+                        <div class="leftside">
+                            <label for="subject">Comments</label>
+                        </div>
+                        <div class="rightside">
+                            <textarea id="subject" name="subject" placeholder="Put your question or a short write-up of your Commission idea!" style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <div class="cleaner">
+                        <div class="leftside">
+                        </div>
+                        <div class="rightside">
+                            <label for="subject">I Have Read The Disclaimer:</label>
+                            <input type="checkbox" id="other" name="business_type" value="OTHER">
+                            <input type="submit" value="Submit">
+                        </div>
+                    <br>
+                    <div class="cleaner">
+
+                    </div>
+            </form>
+        </div>
+            
+            
+        </main>
+        
+        <footer>
+            <p>Silvermancer © 2023. All Rights Reserved.</p>
+        </footer>      
+    </body>
+</html>
