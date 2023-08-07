@@ -86,6 +86,7 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0; /* Set to 0, this should be overlapping the header!! */
+    z-index: 1000;
 }
 
 ul {
@@ -106,7 +107,7 @@ li {
     /* Don't use li:last-child & border-right: none; As this is going right it is not removing the correct one! */
 }
 
-li a, .listbutton { /* Stylings for top nav links */
+li a:not(.gallery-link), .listbutton { /* Stylings for top nav links */
     display: inline-block;
     color: #C1C1FE; /*Text Color*/
     text-align: center;
@@ -114,12 +115,12 @@ li a, .listbutton { /* Stylings for top nav links */
     text-decoration: none;
 }
 
-li a:hover, .listmenu:hover .listbutton {
+li a:not(.gallery-link):hover, .listmenu:hover .listbutton {
     background-color: #6161DF;
     /* Changes the background color when moused over*/
 }
 
-li a:hover:not(.selected) {
+li a:not(.gallery-link):hover:not(.selected) {
     background-color: #6161DF;
     /* Boolean to change color when hovered over AND that its the active webpage. */
 }
@@ -143,7 +144,7 @@ li.listmenu {
     /* Don't use right: as it does not adjust */
 }
 
-.listcontent a {
+.listcontent a:not(.gallery-link) {
     color: #C1C1FE; /*Text Color*/
     padding: 12px 16px;
     text-decoration: none;
@@ -248,7 +249,7 @@ footer {
     margin-top: -30px;
 }
 
-.textbox-content a.drop {
+.textbox-content a:not(.gallery-link).drop {
     color: #C1C1FE;
     font-family: 'Ysabeau Infant', sans-serif;
     padding: 12px 16px;
@@ -374,18 +375,83 @@ input[type=submit]:hover {
 
 /* Form Layout End */
 
+/* Gallery Layout Start */
 
+.gallery {
+    display: flex;
+    padding: 2px;
+	transition: .3s;
+}
 
+.gallerycolumn {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
 
+.gallerycaption {
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    padding: 25px 15px 15px;
+    width: 100%;
+    height: auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: white;
+    opacity: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255 ,255 , 0) 100%);
+    transition: .3s;
+}
 
+.gallery-link {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
+.gallerythumb {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 4px;
+    border: 0;
+}
 
+.galleryimage {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .3s;
+}
 
+.childimage {
+    filter: grayscale(0);
+    z-index: 10;
+}
 
+.parentimage:hover .childimage {
+    filter: grayscale(1);
+    z-index: 0;
+}
 
+.parentimage .childimage:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+    z-index: -100;
+}
 
+.parentimage .childimage:hover ~ .gallerycaption {
+    opacity: 1;
+}
 
-
+/* Gallery Layout End */
 
 
 
